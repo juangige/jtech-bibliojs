@@ -47,15 +47,18 @@ while(true){
 
 
 let buscar = parseInt(prompt("Buscar libro por cantidad de paginas!"))
-const filtrado1 = arrayBiblio.filter((libro) => libro.paginas === buscar)
+const filtrado = arrayBiblio.filter((libro) => libro.paginas === buscar)
 
-
-console.log("Resultado Busqueda")
-filtrado1.forEach((libro)=>{
-console.log(`
-    Libro encontrado: ${libro.nombre}, Autor: ${libro.autor}, Paginas: ${libro.paginas}
-    `)
-})
+if(filtrado.length){
+    console.log("Resultado Busqueda")
+    filtrado.forEach((libro)=>{
+    console.log(`
+        Libro encontrado: ${libro.nombre}, Autor: ${libro.autor}, Paginas: ${libro.paginas}
+        `)
+    })
+} else {
+    console.log("No se encontraron libros")
+}
 
 
 function mostrarLibros(visualizacion) {
