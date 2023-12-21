@@ -65,12 +65,12 @@ function mostrarLibros(visualizacion) {
     console.log("===== BIBLIOTECA =====")
     for (let i = 0; i < arrayBiblio.length; i++) {
         const biblio = arrayBiblio[i]
-        visualizacion(biblio);
+        visualizacion(biblio)
     }
 }
 
 function mostrarInfo(libro) {
-    console.log(`Nombre: ${libro.nombre}, Autor: ${libro.autor}, Paginas: ${libro.paginas}`);
+    console.log(`Nombre: ${libro.nombre}, Autor: ${libro.autor}, Paginas: ${libro.paginas}`)
 }
 
 mostrarLibros(mostrarInfo)
